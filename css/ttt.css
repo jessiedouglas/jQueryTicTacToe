@@ -1,0 +1,65 @@
+html, main, body, div, section, h1 {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  background: transparent;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.ttt-board {
+  margin: 0 auto;
+  width: 600px;
+  border: 2px solid black;
+}
+
+.ttt-row {
+
+}
+
+.ttt-cell {
+  float: left;
+  width: 196px;
+  height: 196px;
+  border: 2px solid black;
+}
+
+.ttt-cell:hover:not(.marked-x):not(.marked-o):not(.game-over) {
+  background: yellow;
+  cursor: pointer;
+}
+
+.marked-x:after {
+  content: "✕";
+  color: red;
+  font-size: 150px;
+  line-height: 196px;
+  display: block;
+  text-align: center;
+}
+
+.marked-o:after {
+  content: "○";
+  color: blue;
+  font-size: 250px;
+  line-height: 196px;
+  display: block;
+  text-align: center;
+}
